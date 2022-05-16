@@ -1,0 +1,19 @@
+.body{
+  text-align: center;
+  padding-bottom: 25px;
+}
+.form{
+  display: inline-block;
+}
+
+.input {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #757575;
+  width: 500px;
+  margin: 0 auto;
+}
+.input:focus {
+  outline:none; }
