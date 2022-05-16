@@ -4,8 +4,6 @@ import passport from 'passport'
 import morgan from 'morgan'
 import db from './app/models/index.js'
 import api from "./app/routes/api.js"
-import basic from "./app/routes/basic.js"
-import board from "./app/routes/board.js"
 import user from "./app/routes/user.js"
 import index from "./app/routes/index.js"
 import todo from "./app/routes/todo.js"
@@ -23,9 +21,7 @@ async function startServer() {
     app.use(_passport.initialize());
     app.use("/", index);
     app.use("/api", api);
-    app.use("/basic", basic);
-    app.use("/board", board);
-    app.use("/todo", _passport.authenticate('jwt', { session: false}), todo);
+    app.use("/todo", todo);
     app.use("/user", user);
     app.use(morgan('dev'))
     db

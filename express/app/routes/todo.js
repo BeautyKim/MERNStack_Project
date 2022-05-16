@@ -1,6 +1,8 @@
 import express from "express"
 import cors from 'cors'
 import dotenv from 'dotenv'
+import TodoService from "../services/todo"
+
 dotenv.config()
 const corsOptions = {
     origin: process.env.ORIGIN,
@@ -15,8 +17,12 @@ app.use(function (_req, res, next) {
     );
     next();
 });
-app.post('/addTodo', cors(corsOptions), (req, res) => {
+app.post('/addTodoList', cors(corsOptions), (req, res) => {
     console.log(" TODO 들어옴 ")
+    TodoService().addTodo(req, res)
+})
+app.get('/getTodoList', cors(corsOptions), (req, res) => {
+    TodoService().addTodo(req, res)
 })
 export default app
 

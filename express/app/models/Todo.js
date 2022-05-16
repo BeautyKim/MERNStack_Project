@@ -1,6 +1,7 @@
 export default function TodoModel(mongoose) {
-    mongoose.model('todo', mongoose.Schema({
+    const todoSchema = mongoose.model({
         task: String
-    }, {timestamps: true}))
+    }, {timestamps: true})
+    return mongoose.model('Todo', todoSchema)
 }
 
