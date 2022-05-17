@@ -6,13 +6,13 @@ import {wrapper} from "@/modules/store";
 import withReduxSaga from 'next-redux-saga';
 
 const App = ({ Component  }) => {
-  return  (<>
-   <Header/>
-  <Nav/><div className='AppMinHeight'>
-  <Component />
-  </div>
-  <Footer/>
-  </>)
+  return (<>
+    <Header/>
+    <Nav/><div className='AppMinHeight'>
+    <Component/>
+    </div>
+    <Footer/>
+    </>)
 }
 App.propTypes = {
   Component: PropTypes.elementType,

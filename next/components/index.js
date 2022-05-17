@@ -8,7 +8,7 @@ export * from "./Pagination"
 export * from "./Table"
 export * from "./auth/Register"
 export * from "./auth/Login"
-export * from "./todo/TodoList"
-export * from "./todo/AppTodo"
+export * from "./todo/GetTodo"
+export * from "./todo/AddTodo"
 
 
